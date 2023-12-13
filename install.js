@@ -237,7 +237,8 @@ async function requestBinary(requestOptions, filePath) {
   const outFile = fs.createWriteStream(filePath);
   let response;
   try {
-    response = await axios.create(requestOptions)({ responseType: 'stream' });
+    const { url, ...rest } = requestOptions;
+    response = await axios.get(url, { responseType: 'stream', ...rest });
   } catch (error) {
     if (error && error.response) {
       if (error.response.status)
