@@ -1,6 +1,6 @@
 {
   "name": "@workable/chromedriver",
-  "version": "81.0.1-rc.0",
+  "version": "81.0.2-rc.0",
   "keywords": [
     "chromedriver",
     "selenium"
